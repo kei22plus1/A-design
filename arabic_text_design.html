@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Text Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffeef8 0%, #f8e8ff 50%, #ffe0f0 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Amiri', serif;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .container {
+            width: 800px;
+            height: 600px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .main-text {
+            font-size: 120px;
+            font-weight: 700;
+            color: #c467b3;
+            text-shadow: 0 0 20px rgba(196, 103, 179, 0.3);
+            z-index: 10;
+            position: relative;
+            text-align: center;
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+        
+        .scattered-text {
+            position: absolute;
+            font-family: 'Amiri', serif;
+            color: rgba(186, 142, 211, 0.25);
+            font-size: 32px;
+            font-weight: 400;
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(186, 142, 211, 0.1);
+        }
+        
+        .text-1 { top: 15%; left: 10%; animation-delay: 0s; }
+        .text-2 { top: 20%; right: 15%; animation-delay: 1s; }
+        .text-3 { bottom: 25%; left: 20%; animation-delay: 2s; }
+        .text-4 { bottom: 20%; right: 10%; animation-delay: 3s; }
+        .text-5 { top: 45%; left: 5%; animation-delay: 4s; }
+        .text-6 { top: 50%; right: 5%; animation-delay: 5s; }
+        .text-7 { top: 75%; left: 45%; animation-delay: 1.5s; }
+        .text-8 { top: 10%; left: 45%; animation-delay: 2.5s; }
+        .text-9 { bottom: 45%; left: 8%; animation-delay: 3.5s; }
+        .text-10 { bottom: 15%; right: 25%; animation-delay: 4.5s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.25; }
+            50% { transform: translateY(-15px) rotate(2deg); opacity: 0.4; }
+        }
+        
+        .decorative-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.1) 0%, rgba(221, 160, 221, 0.05) 100%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        .element-1 { top: 10%; left: 70%; animation-delay: 0s; }
+        .element-2 { bottom: 30%; right: 80%; animation-delay: 2s; }
+        .element-3 { top: 60%; left: 15%; animation-delay: 4s; }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.1; }
+            50% { transform: scale(1.2); opacity: 0.2; }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #dda0dd;
+            border-radius: 50%;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+        
+        .sparkle-1 { top: 25%; left: 25%; animation-delay: 0s; }
+        .sparkle-2 { top: 35%; right: 30%; animation-delay: 1s; }
+        .sparkle-3 { bottom: 35%; left: 35%; animation-delay: 2s; }
+        .sparkle-4 { bottom: 25%; right: 40%; animation-delay: 1.5s; }
+        .sparkle-5 { top: 55%; left: 75%; animation-delay: 0.5s; }
+        .sparkle-6 { top: 15%; right: 50%; animation-delay: 2.5s; }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #c467b3, #ba8ed3);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(196, 103, 179, 0.3);
+            transition: transform 0.3s ease;
+            z-index: 100;
+            font-family: sans-serif;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(196, 103, 179, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" onclick="downloadHTML()">HTMLファイルをダウンロード</button>
+    <div class="container">
+        <div class="main-text">روان</div>
+        
+        <div class="scattered-text text-1">الحب</div>
+        <div class="scattered-text text-2">كل خلية فيك</div>
+        <div class="scattered-text text-3">الحب</div>
+        <div class="scattered-text text-4">كل خلية فيك</div>
+        <div class="scattered-text text-5">الحب</div>
+        <div class="scattered-text text-6">كل خلية فيك</div>
+        <div class="scattered-text text-7">الحب</div>
+        <div class="scattered-text text-8">كل خلية فيك</div>
+        <div class="scattered-text text-9">الحب</div>
+        <div class="scattered-text text-10">كل خلية فيك</div>
+        
+        <div class="decorative-element element-1"></div>
+        <div class="decorative-element element-2"></div>
+        <div class="decorative-element element-3"></div>
+        
+        <div class="sparkle sparkle-1"></div>
+        <div class="sparkle sparkle-2"></div>
+        <div class="sparkle sparkle-3"></div>
+        <div class="sparkle sparkle-4"></div>
+        <div class="sparkle sparkle-5"></div>
+        <div class="sparkle sparkle-6"></div>
+    </div>
+    
+    <script>
+        function downloadHTML() {
+            // 現在のHTMLコンテンツを取得（ボタンを除く）
+            const htmlContent = `<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Text Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffeef8 0%, #f8e8ff 50%, #ffe0f0 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Amiri', serif;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .container {
+            width: 800px;
+            height: 600px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .main-text {
+            font-size: 120px;
+            font-weight: 700;
+            color: #c467b3;
+            text-shadow: 0 0 20px rgba(196, 103, 179, 0.3);
+            z-index: 10;
+            position: relative;
+            text-align: center;
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+        
+        .scattered-text {
+            position: absolute;
+            font-family: 'Amiri', serif;
+            color: rgba(186, 142, 211, 0.25);
+            font-size: 32px;
+            font-weight: 400;
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(186, 142, 211, 0.1);
+        }
+        
+        .text-1 { top: 15%; left: 10%; animation-delay: 0s; }
+        .text-2 { top: 20%; right: 15%; animation-delay: 1s; }
+        .text-3 { bottom: 25%; left: 20%; animation-delay: 2s; }
+        .text-4 { bottom: 20%; right: 10%; animation-delay: 3s; }
+        .text-5 { top: 45%; left: 5%; animation-delay: 4s; }
+        .text-6 { top: 50%; right: 5%; animation-delay: 5s; }
+        .text-7 { top: 75%; left: 45%; animation-delay: 1.5s; }
+        .text-8 { top: 10%; left: 45%; animation-delay: 2.5s; }
+        .text-9 { bottom: 45%; left: 8%; animation-delay: 3.5s; }
+        .text-10 { bottom: 15%; right: 25%; animation-delay: 4.5s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.25; }
+            50% { transform: translateY(-15px) rotate(2deg); opacity: 0.4; }
+        }
+        
+        .decorative-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.1) 0%, rgba(221, 160, 221, 0.05) 100%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        .element-1 { top: 10%; left: 70%; animation-delay: 0s; }
+        .element-2 { bottom: 30%; right: 80%; animation-delay: 2s; }
+        .element-3 { top: 60%; left: 15%; animation-delay: 4s; }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.1; }
+            50% { transform: scale(1.2); opacity: 0.2; }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #dda0dd;
+            border-radius: 50%;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+        
+        .sparkle-1 { top: 25%; left: 25%; animation-delay: 0s; }
+        .sparkle-2 { top: 35%; right: 30%; animation-delay: 1s; }
+        .sparkle-3 { bottom: 35%; left: 35%; animation-delay: 2s; }
+        .sparkle-4 { bottom: 25%; right: 40%; animation-delay: 1.5s; }
+        .sparkle-5 { top: 55%; left: 75%; animation-delay: 0.5s; }
+        .sparkle-6 { top: 15%; right: 50%; animation-delay: 2.5s; }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-text">روان</div>
+        
+        <div class="scattered-text text-1">الحب</div>
+        <div class="scattered-text text-2">كل خلية فيك</div>
+        <div class="scattered-text text-3">الحب</div>
+        <div class="scattered-text text-4">كل خلية فيك</div>
+        <div class="scattered-text text-5">الحب</div>
+        <div class="scattered-text text-6">كل خلية فيك</div>
+        <div class="scattered-text text-7">الحب</div>
+        <div class="scattered-text text-8">كل خلية فيك</div>
+        <div class="scattered-text text-9">الحب</div>
+        <div class="scattered-text text-10">كل خلية فيك</div>
+        
+        <div class="decorative-element element-1"></div>
+        <div class="decorative-element element-2"></div>
+        <div class="decorative-element element-3"></div>
+        
+        <div class="sparkle sparkle-1"></div>
+        <div class="sparkle sparkle-2"></div>
+        <div class="sparkle sparkle-3"></div>
+        <div class="sparkle sparkle-4"></div>
+        <div class="sparkle sparkle-5"></div>
+        <div class="sparkle sparkle-6"></div>
+    </div>
+</body>
+</html>`;
+            
+            // ファイルとしてダウンロード
+            try {
+                const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'index.html';
+                a.style.display = 'none';
+                document.body.appendChild(a);
+                a.click();
+                setTimeout(() => {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }, 100);
+            } catch (error) {
+                // フォールバック：テキストエリアに表示
+                const textarea = document.createElement('textarea');
+                textarea.value = htmlContent;
+                textarea.style.position = 'fixed';
+                textarea.style.top = '50px';
+                textarea.style.left = '50px';
+                textarea.style.width = '80%';
+                textarea.style.height = '80%';
+                textarea.style.zIndex = '1000';
+                textarea.style.background = 'white';
+                textarea.style.border = '2px solid #c467b3';
+                document.body.appendChild(textarea);
+                textarea.select();
+                
+                const closeBtn = document.createElement('button');
+                closeBtn.textContent = 'コードをコピーして閉じる';
+                closeBtn.style.position = 'fixed';
+                closeBtn.style.top = '10px';
+                closeBtn.style.right = '10px';
+                closeBtn.style.zIndex = '1001';
+                closeBtn.style.padding = '10px';
+                closeBtn.style.background = '#c467b3';
+                closeBtn.style.color = 'white';
+                closeBtn.style.border = 'none';
+                closeBtn.style.borderRadius = '5px';
+                closeBtn.onclick = () => {
+                    document.body.removeChild(textarea);
+                    document.body.removeChild(closeBtn);
+                };
+                document.body.appendChild(closeBtn);
+                
+                alert('ダウンロードできませんでした。コードを手動でコピーしてください。');
+            }
+        }
+    </script>
+</body>
+</html>
